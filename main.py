@@ -14,6 +14,8 @@ while True:
 
             text = recognizer.recognize_google(audio)
             text = text.lower()
+            with open("voice_recording.txt", "w") as file:
+                file.write(text)
 
             print(f"Recognized {text}")
 
